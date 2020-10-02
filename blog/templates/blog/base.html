@@ -1,0 +1,23 @@
+<!--to include all the basic element of the site-->
+<!--to tell django to load static template set-->
+
+
+{% load static %}  
+<html>
+<head>    
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="sidebar">
+    <h2>My Blog</h2>
+    <p>This is my blog.</p>
+
+</div>
+
+</body>
+</html>
